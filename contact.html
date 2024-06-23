@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Archéo-IT</title>
+    <!-- Liens vers Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Styles CSS personnalisés -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Barre de navigation -->
+
+
+
+<nav class="navbar">
+
+    <!-- Marque de la barre de navigation -->
+    <a href="accueil.html" class="navbar-brand">Archéo-IT</a>
+    <!-- Bouton hamburger pour les écrans de petite taille -->
+
+    <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"> </span>
+    </div>
+    
+   <!-- Menu de navigation -->
+   <div class="navbar-menu" id="navbarMenu">
+    <a href="accueil.html" class="nav-link" >Accueil</a>
+    <a href="stage.html" class="nav-link" >Stage</a>
+    <a href="site-fouille.html" class="nav-link" >Site fouille</a>
+    <a href="conference.html" class="nav-link">Conférence</a>
+    <a href="revue.html" class="nav-link">Revue</a>
+    <a href="membre.html" class="nav-link"  >Membre</a>
+    <a href="contact.html" class="nav-link" style="color:#007bff;border-bottom:3px solid #007bff">Contact </a>
+</div>
+
+</nav>
+
+<div class="navbars-menu " id="navbarMenu">
+    <a href="accueil.html" class="nav-link" >Accueil</a>
+    <a href="stage.html" class="nav-link">Stage</a>
+    <a href="site-fouille.html" class="nav-link">Site fouille</a>
+    <a href="conference.html" class="nav-link">Conférence</a>
+    <a href="revue.html" class="nav-link">Revue</a>
+    <a href="membre.html" class="nav-link">Membre</a>
+    <a href="contact.html" class="nav-link" style="color:#007bff">Contact</a>
+</div>
+
+<!-- Section de Contact -->
+<section id="contact" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="section-title mb-4">Nous Contacter</h2>
+                <form id="contact-form" method="post" action="php/create_contact.php">
+                    <div class="form-group">
+                        <label for="name">Nom/Prénom</label>
+                        <input type="text" class="form-control" id="name" name="nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adresse Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Envoyer</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h2 class="section-title mb-4">Inscription aux Stages</h2>
+                <form id="registration-form" method="post" action="php/create_inscription.php">
+                    <div class="form-group">
+                        <label for="fullname">Nom/Prénom</label>
+                        <input type="text" class="form-control" id="fullname" name="nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adresse Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date de Naissance</label>
+                        <input type="date" class="form-control" id="dob" name="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="stage">Stage</label>
+                        <select class="form-control" id="stage" name="stage" required>
+                            <option value="">Sélectionner un stage</option>
+                            <option value="Stage 1">Stage 1</option>
+                            <option value="Stage 2">Stage 2</option>
+                            <!-- Ajouter d'autres options de stage -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="comments">Commentaires</label>
+                        <textarea class="form-control" id="comments" name="comments" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p>&copy; 2024 Archéo-IT. Tous droits réservés.</p>
+    </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

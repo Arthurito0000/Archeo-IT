@@ -1,0 +1,593 @@
+/* ////////////////////////////////////// */
+
+/* debut menu */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Styles de la barre de navigation */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 100px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top:0;
+    z-index: 12;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    text-decoration: none;
+    color:#007bff;
+    font-weight:bold;
+    font-size: 35px;
+}
+
+
+
+.navbar-menu {
+    display: flex;
+    
+}
+.navbars-menu {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.navbars-menu{
+    display: none;
+}
+
+.nav-link {
+    padding-left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-link {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.hamburger{
+    display:none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+ 
+
+.bar{
+
+    display:block ;
+    margin: 5px;
+    height: 3px;
+    width: 30px;
+    background-color: black;
+    border-radius: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
+@media (max-width: 909px) {
+    .navbar{
+        position: sticky;
+        top:0;
+        z-index: 22;
+
+    }
+
+   .bts{
+    display: none;
+   }
+    
+
+    .hamburger{
+        display: block;
+        
+    }
+    
+    
+    
+    
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3){
+        transform:  translateY(-8px) rotate(-45deg) ;
+    }
+    
+    .hamburger.active .bar:nth-child(3){
+        transform:  translateY(-8px) rotate(-45deg) ;
+    }
+
+    .navbar-menu{
+        display:none;
+      
+    }
+     
+    .navbars-menu.active{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-link {
+        margin: 10px 0;
+    }
+
+   .navbar .btn {
+       display: none;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+
+ .container-flex{
+
+        display: flex;
+         flex-direction: column;
+         align-items: center;
+          width: 100%;
+    }
+
+    .container-flex .img{
+
+        width: 100%;
+    } 
+    
+    .texte-droit{
+        width: 100%;
+    }
+  
+
+
+    .navbar{
+        position: sticky;
+        top:0;
+        z-index: 22;
+
+    }
+    
+
+    .hamburger{
+        display: block;
+    }
+    
+    
+    
+    
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(3){
+        transform:  translateY(-8px) rotate(-45deg) ;
+    }
+    
+    .hamburger.active .bar:nth-child(3){
+        transform:  translateY(-8px) rotate(-45deg) ;
+    }
+
+    .navbar-menu{
+        display:none;
+      
+    }
+     
+    .navbars-menu.active{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-link {
+        margin: 10px 0;
+    }
+
+    .navbar .btn {
+       display: none;
+    }
+}
+
+/* fin navbar */
+
+
+/* Styles pour la section d'accueil */
+.navbar-menu .nav-link{
+ border-width: 0;
+}
+
+
+.navbar-menu .nav-link:hover{
+    border-bottom: 3px solid #007bff;
+    transition: all 0.1s ease-in-out;
+    border-width: 100%;
+}
+
+.containers {
+    padding: 50px 0;
+    background-image: url('../img/bg2.jpeg');
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+    text-align: center;
+height: auto;
+    animation: back 12s infinite ;
+}
+
+@keyframes back {
+
+    0%{
+        background-image: url('../img/back0.jpg');
+    }
+    20%{
+        background-image: url('../img/back1.jpg');
+    }
+    50%{
+        background-image: url('../img/bg3.jpg');
+    }
+    100%{
+        background-image: url('../img/bg4.jpg');
+    }
+    
+}
+
+.accueil .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accueil h1.headline {
+    font-family: 'Roboto', sans-serif;
+    font-size: 46px;
+    font-weight: bold;
+    color :white;
+    margin-bottom: 20px;
+    background-color:#007bff ;
+    border-radius: 20px;
+}
+.accueil h2{
+   background-color: #007bff;
+   padding: 0;
+   font-weight: bold;
+   color: white;
+   
+}
+
+.accueil p.subheadline {
+    font-size: 18px;
+    margin-bottom: 30px;
+   background-color: whitesmoke;
+   border-radius: 7px ;
+}
+
+
+.accueil ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: whitesmoke;
+}
+
+.accueil ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+
+.header-carousel .owl-nav {
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.header-carousel .owl-nav .owl-prev,
+.header-carousel .owl-nav .owl-next {
+    margin: 7px 0;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    font-size: 22px;
+    transition: .5s;
+}
+
+.header-carousel .owl-nav .owl-prev:hover,
+.header-carousel .owl-nav .owl-next:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+
+
+/* ////////////////////// */
+/* page contact */
+
+/* Styles pour la section d'en-tête */
+.header-section {
+    background-image: url('header-bg.jpg');
+    background-size: cover;
+    padding: 100px 0;
+    color: #fff;
+}
+
+/* Styles pour les titres de section */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Styles pour les cartes */
+.card {
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Styles pour le formulaire de contact */
+#contact-form, #registration-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Styles pour le footer */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Styles pour la barre de navigation active */
+.navbar .nav-item.active .nav-link {
+    font-weight: bold;
+}
+
+/* Styles pour les boutons */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* stage */
+
+
+.services-item {
+  
+    transition: .5s;
+    position: relative;
+    height: 200px;
+    margin: 15px 0;
+   
+}
+.services-item1 {
+  
+    transition: .5s;
+    position: relative;
+  
+   
+}
+
+ .services-item::before {
+  
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.services-item1::after {
+  
+    content: "Archeo-Decouvert"; 
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    background-color:transparent;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} 
+
+.services-item2::after {
+  
+    content: "Exploration des civilisations anciennes"; 
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    background-color:transparent;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} 
+
+.services-item3::after {
+  
+    content: "Archeo-Art"; 
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    background-color:transparent;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} 
+
+.services-item4::after {
+  
+    content: "Exploration de la nature et de l'histoire"; 
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    background-color:transparent;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} 
+
+
+.services-items1::after {
+  
+    content: "Stage de fouilles archéologiques"; 
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    background-color:transparent;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} 
+
+.services-items2::after {
+  
+    content: "Atelier de céramologie"; 
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    background-color:transparent;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} 
+
+.services-items3::after {
+  
+    content: "Stage de documentation et d'analyse"; 
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    background-color:transparent;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} 
+
+.services-items4::after {
+  
+    content: "Formation à la conservation-restauration"; 
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    background-color:transparent;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+} 
+
+
+.service-item:hover {
+    margin-top: -10px;
+}
+
+.service-item * {
+    transition: .5s;
+}
+
+

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archeo-IT</title>
+
+    
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        #map { height: 600px; 
+                z-index: -2;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <nav class="navbar">
+
+        <!-- Marque de la barre de navigation -->
+        <a href="accueil.html" class="navbar-brand">Archéo-IT</a>
+        <!-- Bouton hamburger pour les écrans de petite taille -->
+    
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"> </span>
+        </div>
+        
+       <!-- Menu de navigation -->
+       <div class="navbar-menu" id="navbarMenu">
+        <a href="accueil.html" class="nav-link" >Accueil</a>
+        <a href="stage.html" class="nav-link" >Stage</a>
+        <a href="site-fouille.html" class="nav-link" style="color:#007bff;">Site fouille</a>
+        <a href="conference.html" class="nav-link">Conférence</a>
+        <a href="revue.html" class="nav-link">Revue</a>
+        <a href="membre.html" class="nav-link">Membre</a>
+        <a href="contact.html" class="nav-link">Contact </a>
+    </div>
+    
+    
+    
+    </nav>
+    
+    <div class="navbars-menu " id="navbarMenu">
+        <a href="accueil.html" class="nav-link" >Accueil</a>
+        <a href="stage.html" class="nav-link" >Stage</a>
+        <a href="site-fouille.html" class="nav-link" style="color:#007bff">Site fouille</a>
+        <a href="conference.html" class="nav-link">Conférence</a>
+        <a href="revue.html" class="nav-link">Revue</a>
+        <a href="membre.html" class="nav-link">Membre</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+
+    
+    <h2 class="section-title text-center my-4 ">Sites de Fouilles</h2>
+
+    <div id="map" class="container " ></div>
+    
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script>
+        var map = L.map('map').setView([48.8566, 2.3522], 3); // Centre la carte sur la France
+    
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+    
+        // Exemple de données de sites de fouilles au format JSON
+        var sitesDeFouilles = [
+        
+                {
+                    "nom": "Carthage",
+                    "latitude": 36.8588,
+                    "longitude": 10.3120,
+                    "description": "Ancienne cité punique située près de Tunis en Tunisie."
+                },
+                {
+                    "nom": "Vallée des Rois",
+                    "latitude": 25.7405,
+                    "longitude": 32.6011,
+                    "description": "Site archéologique en Égypte où de nombreuses tombes royales ont été découvertes."
+                },
+                {
+                    "nom": "Pompéi",
+                    "latitude": 40.7498,
+                    "longitude": 14.4841,
+                    "description": "Ancienne ville romaine située près de Naples en Italie, ensevelie par l'éruption du Vésuve en 79 apr. J.-C."
+                },
+                {
+                    "nom": "Stonehenge",
+                    "latitude": 51.1789,
+                    "longitude": -1.8262,
+                    "description": "Célèbre site mégalithique situé en Angleterre."
+                },
+                {
+                    "nom": "Lascaux",
+                    "latitude": 45.0589,
+                    "longitude": 1.1825,
+                    "description": "Grotte ornée de peintures préhistoriques située en France."
+                },
+                {
+                    "nom": "Troy",
+                    "latitude": 39.9573,
+                    "longitude": 26.2389,
+                    "description": "Ancienne cité légendaire située en Turquie, célèbre pour la guerre de Troie."
+                },
+        
+                {
+                    "nom": "Site de fouilles A",
+                    "latitude": 48.8566,
+                    "longitude": 2.3522,
+                    "description": "Description du site de fouilles A."
+                },
+                {
+                    "nom": "Site de fouilles B",
+                    "latitude": 51.5074,
+                    "longitude": -0.1278,
+                    "description": "Description du site de fouilles B."
+                },
+                {
+                    "nom": "Site de fouilles C",
+                    "latitude": 41.9028,
+                    "longitude": 12.4964,
+                    "description": "Description du site de fouilles C."
+                },
+                {
+                    "nom": "Site de fouilles D",
+                    "latitude": 40.7128,
+                    "longitude": -74.0060,
+                    "description": "Description du site de fouilles D."
+                },
+                {
+                    "nom": "Site de fouilles E",
+                    "latitude": 35.6895,
+                    "longitude": 139.6917,
+                    "description": "Description du site de fouilles E."
+                },
+                // Ajoutez d'autres sites de fouilles ici...
+                {
+                    "nom": "Site de fouilles F",
+                    "latitude": 39.9042,
+                    "longitude": 116.4074,
+                    "description": "Description du site de fouilles F."
+                },
+                {
+                    "nom": "Site de fouilles G",
+                    "latitude": -22.9068,
+                    "longitude": -43.1729,
+                    "description": "Description du site de fouilles G."
+                },
+                {
+                    "nom": "Site de fouilles H",
+                    "latitude": 55.7558,
+                    "longitude": 37.6176,
+                    "description": "Description du site de fouilles H."
+                },
+                {
+                    "nom": "Site de fouilles I",
+                    "latitude": 37.7749,
+                    "longitude": -122.4194,
+                    "description": "Description du site de fouilles I."
+                },
+                {
+                    "nom": "Site de fouilles J",
+                    "latitude": -33.8688,
+                    "longitude": 151.2093,
+                    "description": "Description du site de fouilles J."
+                },
+                // Ajoutez d'autres sites de fouilles ici...
+        ];
+    
+        // Boucle à travers les données des sites de fouilles et ajoute des marqueurs numérotés à la carte
+        for (var i = 0; i < sitesDeFouilles.length; i++) {
+            var site = sitesDeFouilles[i];
+            var marker = L.marker([site.latitude, site.longitude]).addTo(map);
+            marker.bindPopup('<b>' + (i + 1) + '</b><br>' + site.description);
+        }
+    </script>
+
+    <!-- Footer -->
+<footer class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p>&copy; 2024 Archéo-IT. Tous droits réservés.</p>
+    </div>
+</footer>
+      
+    <script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
